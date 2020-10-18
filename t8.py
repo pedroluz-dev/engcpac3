@@ -12,13 +12,14 @@ def primo():
     primos = []
     div = 0
     i = 2
-    for div in range (1, i):
-        if i % div == 0:
-            div += 1
-        if div > 1:
-            break
-    if div < 1:
-        primos.append(i)
+    while len(primos) < 101:
+        for div in range (1, i):
+            if i % div == 0:
+                div += 1
+                if div > 1:
+                    break
+        if div < 1:
+            primos.append(i)
 
     return primos
 
