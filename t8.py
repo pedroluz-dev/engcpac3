@@ -9,7 +9,12 @@ app = Flask(__name__)
 @app.route('/')
 
 def primos():
-    primos = "Somos primos"
+    primos = []
+    i = 2
+
+    if i % i == 0 and i % 2 == 0 and i % 3 == 0:
+        primos.append(i)
+
     return primos
     
 
