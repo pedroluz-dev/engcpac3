@@ -9,31 +9,27 @@ app = Flask(__name__)
 @app.route('/')
 
 
-def ehprimo(numero):
-    primo = True
-    
-    if (numero == 1 ):
-        primo = False
-    else:
-        primo = True
 
-    for i in range (2, numero):
-        if (numero % i == 0):
-            primo = False
-    return primo
+def primo(num):
+   if num != 1:
+         t = True
+         for i in range(2,num):
+             if (num % i == 0):
+                 t = False
+                 break
+         return t
+         
+e = []
+lim = 100
+ 
+for num in range(2, lim + 1):
 
-def cade_os_primos ():
-    numero = 1
-    primos = []
-    while len(primos) <= 100:
-        if (ehprimo(numero)):
-            primos.append(numero)
-        numero+= 1
+    test = primo(num)
 
-    return primos
-
-cade_os_primos()
-            
+    if (test):
+        e.append(num)
+        
+print ("Numeros primos: ", e)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
