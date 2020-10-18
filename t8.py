@@ -28,8 +28,8 @@ for num in range(2, lim + 1):
 
     if (test):
         e.append(num)
-        
-print ("Numeros primos: ", e)
+        return e
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
