@@ -11,10 +11,10 @@ app = Flask(__name__)
 def primos():
     primos = []
     i = 2
-
-    if i % i == 0 and i % 2 == 0 and i % 3 == 0:
-        primos.append(i)
-
+    while i < 101:
+        if i % i == 0 and i % 2 == 0 and i % 3 == 0:
+            primos.append(i)
+            i += 1
     return primos
     
 
